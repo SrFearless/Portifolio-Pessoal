@@ -1,0 +1,205 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+        <!-- FIM GOOGLE FONTS-->
+        <!-- BOOTSTRAP ICONS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- FIM BOOTSTRAP ICONS-->    
+    <title>Projetos</title>
+    <link rel="stylesheet" href="projetosstyle.css">
+    <link rel="icon" type="image/png" href="Marca.png">
+</head>
+<body>
+    <header>
+        <nav class="tituloprojeto">
+            <h2>PROJETOS</h2>
+        </nav>
+
+        <div class="conteudo__geral">
+            <div class="container">
+                <div class="container-carrossel">
+                    <div class="carrossel">
+                        <div class="carrossel-item" onclick="mostrarConteudo(1)">Banco<br>de<br>Dados</div>
+                        <div class="carrossel-item" onclick="mostrarConteudo(2)">Dev.<br>de<br>Web</div>
+                        <div class="carrossel-item" onclick="mostrarConteudo(3)">Análise<br>de<br>Sistemas</div>
+                        <div class="carrossel-item" onclick="mostrarConteudo(4)">NA</div>
+                        <div class="carrossel-item" onclick="mostrarConteudo(5)">NA</div>
+                        <div class="carrossel-item" onclick="mostrarConteudo(6)">NA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-do-texto">
+            <div id="texto1" class="visivel">
+                <h2>CÓDIGO - MySQL</h2>
+                <p> create database Livraria;<br>
+                    use Livraria;<br><br>
+
+                    create table Cliente (<br>
+                    idCliente int not null,<br>
+                    nome varchar(50) not null,<br>
+                    telefone varchar(20) not null,<br>
+                    email varchar(50) not null,<br>
+                    endereco varchar(100) not null,<br>
+                    primary key (idCliente));<br><br>
+
+                    create table Editora (<br>
+                    idEditora int not null,<br>
+                    nome varchar(50) not null,<br>
+                    telefone varchar(20) not null,<br>
+                    email varchar(50) not null,<br>
+                    endereco varchar(100) not null,<br>
+                    primary key (idEditora));<br><br>
+
+                    create table Pedido (<br>
+                    idPedido int not null,<br>
+                    idCliente int not null,<br>
+                    dataPedido date not null,<br>
+                    valorPedido decimal(5,2) not null,<br>
+                    primary key (idPedido),<br>
+                    foreign key (idCliente) references Cliente (idCliente));<br><br>
+
+                    create table Livro (<br>
+                    idLivro int not null,<br>
+                    idEditora int not null,<br><br>
+                    
+                    titulo varchar(100) not null,<br>
+                    autor varchar(50) not null,<br>
+                    ano int not null,ISBN varchar(20) not null,<br>
+                    preco decimal(5,2) not null,<br>
+                    primary key (idLivro),<br>
+                    foreign key (idEditora) references Editora (idEditora));<br><br>
+
+                    create table ItemPedido (<br>
+                    idPedido int not null,<br>
+                    idLivro int not null,<br>
+                    quantidade int not null,<br>
+                    valorItemPedido decimal(5,2) not null,<br>
+                    foreign key (idPedido) references Pedido (idPedido),<br>
+                    foreign key (idLivro) references Livro (idLivro));<br><br>
+                    
+                    create table Estoque (<br>
+                    idLivro int not null,<br>
+                    quantidade int not null,<br>
+                    foreign key (idLivro) references Livro (idLivro));/p><br>
+                </p>
+            </div>
+            <div id="texto2" class="invisivel">
+                <h2>CÓDIGO - HTML, CSS e Javascript</h2>
+                <p> !DOCTYPE html><br>
+                    html lang="pt-br"><br>
+                    head><br>
+                    meta charset="UTF-8"><br>
+                    meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+                    link rel="preconnect" href="https://fonts.googleapis.com"><br>
+                    link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><br>
+                    link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0," rel="stylesheet"><br>
+                    link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"><br>
+                    link rel="stylesheet" href="(Uninter) Estilos.css"><br>
+                    title>Portifolio/title><br>
+                    /head><br><br>
+
+                    body><br>
+                    header><br>
+                    /header><br>
+                    /body><br><br>
+
+                    main><br>
+                    section><br>
+                    /section><br><br>
+
+                    section><br>
+                    /section><br><br>
+
+                    section><br>
+                    /section><br><br>
+
+                    section><br>
+                    /section><br><br>
+
+                    section><br>
+                    /section><br>
+                    /main><br><br>
+
+                    footer><br>
+                    /footer><br>
+                    /html><br></p>
+            </div>
+            <div id="texto3" class="invisivel">
+                <h2>CÓDIGO - PlantUML</h2>
+                <p> Feito pelo PlantUML, Mas irei deixar somente os Requisitos!!<br><br>
+                    
+                    DIAGRAMA DE CLASSES<br><br>
+                    Requisitos Funcionais:<br>
+                    ⦁ Controle de Acesso por Voz<br>
+                    ⦁ Controle de Dispositivos (Iluminação e Ar - Condicionado)<br>
+                    ⦁ Identificação Automática por Câmera<br><br>
+                    Requisitos Não Funcionais:<br>
+                    ⦁ Escalabilidade<br>
+                    ⦁ Segurança<br>
+                    ⦁ Desempenho<br><br>
+
+                    DIAGRAMA CASOS DE USO<br><br>
+                    Requisitos Funcionais:<br>
+                    ⦁ Cancelar Controle de Dispositivos por Voz<br>
+                    ⦁ Notificação ao Cliente<br>
+                    ⦁ Consulta ao Histórico de Acessos<br><br>
+                    Requisitos Não Funcionais:<br>
+                    ⦁ Audibilidade<br>
+                    ⦁ Escalabilidade de Usuários<br>
+                    ⦁ Latência Mínima<br>
+                </p>
+            </div>
+            <div id="texto4" class="invisivel">
+                <h2>CÓDIGO - (NA)</h2>
+                <p>
+                </p>
+            </div>
+            <div id="texto5" class="invisivel">
+                <h2>CÓDIGO - (NA)</h2>
+                <p>
+                </p>
+            </div>
+            <div id="texto6" class="invisivel">
+                <h2>CÓDIGO - (NA)</h2>
+                <p>
+                </p>
+            </div>
+        </div>
+
+        <div class="box-de-image">
+            <div id="imagem1" class="visivel">
+                <img src="Banco de Dados.jpg">
+            </div>
+            <div id="imagem2" class="invisivel">
+                <img src="Prévia do Site.png">
+            </div>
+            <div id="imagem3" class="invisivel">
+                <img src="Diagramas.jpg">
+            </div>
+            <div id="imagem4" class="invisivel">
+                <!--<img src="#">-->
+            </div>
+            <div id="imagem5" class="invisivel">
+                <!--<img src="#">-->
+            </div>
+            <div id="imagem6" class="invisivel">
+                <!--<img src="#">-->
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+    </section>
+    <script src="./projetoscript.js"></script>
+</body>
+
+<footer>
+</footer>
