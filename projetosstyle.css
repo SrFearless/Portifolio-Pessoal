@@ -1,7 +1,7 @@
 /* PROJETOS------------------------------------------------------------------ */
 .tituloprojeto{
     filter: drop-shadow(1px 1px 20px rgb(255, 60, 0));
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     font-size: 75px;
     font-family: 'Poppins', sans-serif;
@@ -16,7 +16,7 @@ body {
 body {
   text-align: center;
   padding: 4em 0;
-  background-color: #000000;
+  background-color: #3d3d3d;
   margin: 0;
   min-height: 100vh;
   display: flex;
@@ -197,43 +197,41 @@ img {
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
   background: linear-gradient(-229deg, #000000, #fdfdfd);
 }
-
-@media screen and (min-width: 576px) {
-  .container-carrossel {
-    --widthItem: 250px;
-    --heightItem: 200px;
-  }
-}
 /* CELULAR--------------------------------------------------------------- */
-@media screen and (max-width: 1230px){
+@media screen and (max-width: 500px){
   /* GERAIS---------------------------------------------------------------- */
   .tituloprojeto {
-    font-size: 50px;
+    font-size: 30px;
     top: auto;
     text-align: center;
+    display: flex;
+    right: 50px;
   }
   .box-do-texto{
     padding: 10px;
     top: 640px;
-    left: 50px;
-    width: 450px;
-    height: 950px;
+    left: 20px;
+    width: 270px;
+    height: 840px;
 }
 .box-do-texto p{
-font-size: 12px;
+font-size: 10px;
 }
 .box-do-texto h2{
 color: red;
 }
 .box-de-image{
-    padding: 10px;
-    top: 1600px;
-    left: 50px;
-    width: 450px;
-    height: 800px;
+  padding: 10px;
+  top: 1500px;
+  left: 20px;
+  width: 270px;
+  height: 840px;
+}
+.box-de-image img{
+  width: 100%;
 }
 .container-carrossel .carrossel-item{
-  font-size: 31px;
+  font-size: 35px;
   padding: 75px 2px;
 }
 .container-carrossel{
