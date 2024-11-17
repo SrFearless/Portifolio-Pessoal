@@ -54,8 +54,8 @@ header > .interface{
         display: none;
         position: absolute; /* Posicionamento absoluto */
         right: 5%;
-        width: 50%;
-        height: 25%;
+        width: 70%;
+        height: 20%;
 
         flex-direction: column;
         border-radius: 10px;
@@ -76,7 +76,7 @@ header > .interface{
     .menu-mobile-items li a {
         text-decoration: none; /* Remove sublinhado */
         color: #333; /* Cor do texto */
-        font-size: 35px; /* Tamanho da fonte */
+        font-size: 25px; /* Tamanho da fonte */
     }
 /* Mostra o menu mobile quando a classe "active" é adicionada */
 .menu-mobile-items.active {
@@ -423,7 +423,7 @@ footer .line-footer p a{
 }
 
 /* CELULAR--------------------------------------------------------------- */
-@media screen and (max-width: 1230px){
+@media screen and (max-width: 500px){
 /* GERAIS---------------------------------------------------------------- */
         .flex{
                 flex-direction: column;
@@ -506,7 +506,7 @@ footer .line-footer p a{
 
         }
         .portifolio .txt-sobre p1 span{
-                font-size: 22px;
+                font-size: 15px;
                 text-align: center;
         }
         .img-sobre img{
@@ -517,7 +517,7 @@ footer .line-footer p a{
                 padding: 20px 8%;
         }
         .imgport{
-                width: 40%;
+                width: 100%;
                 height: 360px;
                 margin: 0 auto;
         }
@@ -527,6 +527,14 @@ footer .line-footer p a{
         .imgport:hover .descrição h2 {
                 width: 100%;
                 height: 30%;
+        }
+        footer .line-footer .btn-social button{
+                width: 22%;
+                
+        }
+        footer .line-footer{
+                font-size: 14px;
+                text-align: center;
         }
 /* Esconde o Menu Desktop e Mostra o Mobile--------------------------------*/
 .menu-desktop {
