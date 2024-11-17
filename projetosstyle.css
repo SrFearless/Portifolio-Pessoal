@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif;
   position: absolute;
   top: -100px;
-  right: 275px;
+  right: 1000px;
 }
 body {
   background-color: #ffffff;
@@ -211,7 +211,7 @@ background: linear-gradient(-229deg, #000000, #fdfdfd);
   top: auto;
   text-align: center;
   display: flex;
-  right: 85px;
+  right: 70px;
 }
 .box-do-texto{
   padding: 10px;
@@ -238,7 +238,7 @@ width: 100%;
 }
 .container-carrossel .carrossel-item{
 font-size: 35px;
-padding: 75px 2px;
+padding: 75px 1px;
 }
 .container-carrossel{
 align-items: center
