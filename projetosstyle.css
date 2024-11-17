@@ -1,218 +1,224 @@
 /* PROJETOS------------------------------------------------------------------ */
 .tituloprojeto{
-    filter: drop-shadow(1px 1px 20px rgb(255, 60, 0));
-    color: #ffffff;
-    text-align: center;
-    font-size: 75px;
-    font-family: 'Poppins', sans-serif;
-    position: absolute;
-    top: -100px;
+  filter: drop-shadow(1px 1px 20px rgb(255, 60, 0));
+  color: #ffffff;
+  text-align: center;
+  font-size: 75px;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: -100px;
+  right: 275px;
 }
 body {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap");
 
 body {
-  text-align: center;
-  padding: 4em 0;
-  background-color: #3d3d3d;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+text-align: center;
+padding: 4em 0;
+background-color: #3d3d3d;
+margin: 0;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .box-do-texto{
-        padding: 10px;
-        border-radius: 20px;
-        border: 2px solid rgb(134, 0, 0);
-        box-shadow: 1px 1px 20px red;
-        margin-top: 0px;
-        transition: .2s;
-        position: absolute;
-        top: 600px;
-        left: 850px;
-        text-align: left;
-        width: 550px;
-        height: 1000px;
-        background-color: rgba(0, 0, 0, 0.616);
-        color: #ffffff;
-        font-family: 'Poppins', sans-serif;
+      padding: 10px;
+      border-radius: 20px;
+      border: 2px solid rgb(134, 0, 0);
+      box-shadow: 1px 1px 20px red;
+      margin-top: 0px;
+      transition: .2s;
+      position: absolute;
+      top: 600px;
+      left: 100px;
+      height: 75%;
+      width: 35%;
+      text-align: left;
+      background-color: rgba(0, 0, 0, 0.616);
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
 }
 .box-do-texto p{
-    font-size: 12px;
+  font-size: 12px;
 }
 .box-do-texto h2{
-    color: red;
+  color: red;
 }
 .box-de-image{
-    color: aliceblue;
-        padding: 10px;
-        border-radius: 20px;
-        border: 2px solid rgb(134, 0, 0);
-        box-shadow: 1px 1px 20px red;
-        margin-top: 30px;
-        transition: .2s;
-        position: absolute;
-        top: 570px;
-        right: 850px;
-        width: 550px;
-        height: 1000px;
-        background-color: rgb(255, 255, 255);
-        color: #000000;
+  color: aliceblue;
+      padding: 10px;
+      border-radius: 20px;
+      border: 2px solid rgb(134, 0, 0);
+      box-shadow: 1px 1px 20px red;
+      margin-top: 30px;
+      transition: .2s;
+      position: absolute;
+      top: 570px;
+      right: 100px;
+      height: 75%;
+      width: 35%;
+      background-color: rgb(255, 255, 255);
+      color: #000000;
 }
 .box-de-image .carroselimage-1 img{
-  width: 100%;
-  height: 100%;
-  visibility: visible;
+width: 100%;
+height: 100%;
+visibility: visible;
 }
 .box-de-image .carroselimage-2 img{
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
+width: 100%;
+height: 100%;
+visibility: hidden;
 }
 .box-de-image .carroselimage-3 img{
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
+width: 100%;
+height: 100%;
+visibility: hidden;
 }
 .box-de-image .carroselimage-4 img{
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
+width: 100%;
+height: 100%;
+visibility: hidden;
 }
 .box-de-image .carroselimage-5 img{
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
+width: 100%;
+height: 100%;
+visibility: hidden;
 }
 .box-do-image .carroselimage-6 img{
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
+width: 100%;
+height: 100%;
+visibility: hidden;
+}
+.container-carrossel .carrossel-item{
+  font-size: 45px;
+  padding: 50px 10px;
+
 }
 .visivel {
-  display: block;
+display: block;
 }
 
 .invisivel {
-  display: none;
+display: none;
 }
 
 .conteudo__geral {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
+display: block;
+max-width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .container-carrossel {
-  --widthItem: 150px;
-  --heightItem: 100px;
-  width: var(--widthItem);
-  height: var(--heightItem);
-  perspective: 1000px;
-  position: absolute;
-  top: 300px;
+--widthItem: 150px;
+--heightItem: 100px;
+width: var(--widthItem);
+height: var(--heightItem);
+perspective: 1000px;
+position: absolute;
+top: 300px;
 }
 
 .carrossel {
-  --rotatey: 0;
-  font-size: 4rem;
-  position: relative;
-  transform: rotatey(var(--rotatey));
-  transform-style: preserve-3d;
-  user-select: none;
-  cursor: grab;
+--rotatey: 0;
+font-size: 4rem;
+position: relative;
+transform: rotatey(var(--rotatey));
+transform-style: preserve-3d;
+user-select: none;
+cursor: grab;
 }
 
 .carrossel-item {
-  opacity: 0.5;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  transition: opacity 0.5s;
+opacity: 0.8;
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+transition: opacity 0.5s;
 }
 
 .carrossel-item:hover {
-  opacity: 1;
+opacity: 5;
 }
 
 .carrossel,
 .carrossel-item {
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 }
 
 /* background: linear-gradient(-229deg, #642B73, #C6426E); */
 
 .carrossel-item:nth-child(1) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #ffd000, #ffffff);
+--rotatey: 0;
+transform: rotatey(var(--rotatey)) translatez(var(--tz));
+background: linear-gradient(-229deg, #ffd000, #ffffff);
 }
 
 .carrossel-item:nth-child(2) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #ff0000, #ffffff);
+--rotatey: 0;
+transform: rotatey(var(--rotatey)) translatez(var(--tz));
+background: linear-gradient(-229deg, #ff0000, #ffffff);
 }
 
 .carrossel-item:nth-child(3) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #0400ff, #ffffff);
+--rotatey: 0;
+transform: rotatey(var(--rotatey)) translatez(var(--tz));
+background: linear-gradient(-229deg, #0400ff, #ffffff);
 }
 .carrossel-item:nth-child(4) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #000000, #ffffff);
+--rotatey: 0;
+transform: rotatey(var(--rotatey)) translatez(var(--tz));
+background: linear-gradient(-229deg, #000000, #ffffff);
 }
 
 .carrossel-item:nth-child(5) {
-  --rotate: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #000000, #f7fafa);
+--rotate: 0;
+transform: rotatey(var(--rotatey)) translatez(var(--tz));
+background: linear-gradient(-229deg, #000000, #f7fafa);
 }
 
 .carrossel-item:nth-child(6) {
-  --rotatey: 0;
-  transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #000000, #fdfdfd);
+--rotatey: 0;
+transform: rotatey(var(--rotatey)) translatez(var(--tz));
+background: linear-gradient(-229deg, #000000, #fdfdfd);
 }
 /* CELULAR--------------------------------------------------------------- */
 @media screen and (max-width: 500px){
-  /* GERAIS---------------------------------------------------------------- */
-  .tituloprojeto {
-    font-size: 30px;
-    top: auto;
-    text-align: center;
-    display: flex;
-    right: 50px;
-  }
-  .box-do-texto{
-    padding: 10px;
-    top: 640px;
-    left: 20px;
-    width: 270px;
-    height: 840px;
+/* GERAIS---------------------------------------------------------------- */
+.tituloprojeto {
+  font-size: 30px;
+  top: auto;
+  text-align: center;
+  display: flex;
+  right: 85px;
+}
+.box-do-texto{
+  padding: 10px;
+  top: 640px;
+  left: 40px;
+  width: 270px;
+  height: 880px;
 }
 .box-do-texto p{
 font-size: 10px;
@@ -221,20 +227,20 @@ font-size: 10px;
 color: red;
 }
 .box-de-image{
-  padding: 10px;
-  top: 1500px;
-  left: 20px;
-  width: 270px;
-  height: 840px;
+padding: 10px;
+top: 1530px;
+left: 40px;
+width: 270px;
+height: 840px;
 }
 .box-de-image img{
-  width: 100%;
+width: 100%;
 }
 .container-carrossel .carrossel-item{
-  font-size: 35px;
-  padding: 75px 2px;
+font-size: 35px;
+padding: 75px 2px;
 }
 .container-carrossel{
-  align-items: center
+align-items: center
 }
 }
