@@ -1,3 +1,10 @@
+const isProd = process.env.NODE_ENV === 'production';
+module.exports = {
+  output: isProd ? 'export' : undefined,
+  basePath: isProd ? '/<seu-repo>' : '',
+  assetPrefix: isProd ? '/<seu-repo>/' : '',
+};
+
 let userConfig = undefined
 try {
   userConfig = await import('./v0-user-next.config')
