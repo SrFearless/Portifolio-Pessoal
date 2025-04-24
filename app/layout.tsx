@@ -8,8 +8,6 @@ import { NavBar } from "@/components/nav-bar"
 import RankingMarquee from "@/components/ranking-marquee"
 import { cn } from "@/lib/utils"
 
-
-
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
