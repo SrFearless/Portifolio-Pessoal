@@ -1,8 +1,9 @@
 const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
   output: isProd ? 'export' : undefined,
-  basePath: isProd ? '/<seu-repo>' : '',
-  assetPrefix: isProd ? '/<seu-repo>/' : '',
+  basePath: isProd ? '/Portifolio-Pessoal' : '',
+  assetPrefix: isProd ? '/Portifolio-Pessoal/' : '',
 };
 
 let userConfig = undefined
