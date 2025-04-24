@@ -12,6 +12,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Portifólio ",
+  icons: {
+    icon: "/icons/Marca.png",},
   description: "Veja meu melhores trabalhos",
     generator: 'v0.dev'
 }
@@ -22,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html>
       <body className={cn(inter.className, "min-h-screen bd-background bg-black")}>
         <div className="font-pixel">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
