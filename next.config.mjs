@@ -1,11 +1,20 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 
-export default {
+module.exports = {
+  // gera export estático (Next 14+)
   output: isProd ? 'export' : undefined,
+
+  // ajusta a URL base para GitHub Pages (substitua pelo seu repo)
   basePath: isProd ? '/Portifolio-Pessoal' : '',
   assetPrefix: isProd ? '/Portifolio-Pessoal/' : '',
+
+  // opcional: força trailing slash, evita 404 em rotas sem "/" 
+  // (se você quiser URLs /projetos/ em vez de /projetos.html)
+  trailingSlash: true,
 };
+
 
 let userConfig = undefined
 try {
