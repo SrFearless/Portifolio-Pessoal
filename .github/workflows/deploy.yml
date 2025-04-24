@@ -3,7 +3,7 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches:
-      - main    # ou a branch que você use
+      - main  # sua branch principal
 
 jobs:
   build-and-deploy:
@@ -17,15 +17,15 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies (legacy-peer-deps)
-        run: npm install --legacy-peer-deps
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Build Next.js and export static files
-        run: npm run predeploy
+      - name: Build static export
+        run: npm run predeploy         # agora só faz next build
 
-      - name: Deploy to gh-pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: out
+          publish_dir: out             # diretório gerado pelo build

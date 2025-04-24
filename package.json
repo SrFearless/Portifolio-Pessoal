@@ -1,15 +1,17 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "homepage": "https://SrFearless.github.io/Portifolio-Pessoal",
+
   "scripts": {
     "start": "next start -p 5000",
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "predeploy": "npm run build && npm run export",
+    "predeploy": "npm run build",          
     "deploy": "gh-pages -d out"
   },
+
+  "homepage": "https://SrFearless.github.io/Portifolio-Pessoal",
+
   "dependencies": {
     "@hookform/resolvers": "latest",
     "@next/font": "^14.2.15",

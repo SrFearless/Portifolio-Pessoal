@@ -1,6 +1,7 @@
+/** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = {
+export default {
   output: isProd ? 'export' : undefined,
   basePath: isProd ? '/Portifolio-Pessoal' : '',
   assetPrefix: isProd ? '/Portifolio-Pessoal/' : '',
