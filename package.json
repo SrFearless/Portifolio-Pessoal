@@ -2,14 +2,14 @@
   "name": "frontend",
   "version": "1.0.0",
   "homepage": "https://SrFearless.github.io/Portifolio-Pessoal",
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "export": "next export",
-  "deploy": "gh-pages -d out",
-  "build-and-deploy": "npm run build && npm run export && npm run deploy"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "gh-pages -d out",
+    "build-and-deploy": "npm run build && npm run export && npm run deploy"
+  },
   "dependencies": {
     "@hookform/resolvers": "latest",
     "@next/font": "^14.2.15",
@@ -52,7 +52,7 @@
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "lucide-react": "^0.454.0",
-    "next": "^15.2.4",
+    "next": "^15.1.8",
     "next-themes": "latest",
     "nookies": "^2.5.2",
     "react": "^19.1.0",

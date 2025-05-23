@@ -18,12 +18,11 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Habilita a exportação estática
-  distDir: 'out', // Pasta de saída
+  output: 'export',
+  distDir: 'out',
   images: {
-    unoptimized: true, // Desativa otimização de imagens para exportação estática
+    unoptimized: true,
   },
-  // Configuração basePath se estiver usando um domínio personalizado ou subpasta
   basePath: process.env.NODE_ENV === 'production' ? '/Portifolio-Pessoal' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/Portifolio-Pessoal/' : '',
 }
