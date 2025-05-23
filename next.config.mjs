@@ -18,21 +18,17 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export', // Habilita a exportação estática
+  distDir: 'out', // Pasta de saída
   images: {
-    unoptimized: true,
+    unoptimized: true, // Desativa otimização de imagens para exportação estática
   },
-  experimental: {
-    webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
-  },
+  // Configuração basePath se estiver usando um domínio personalizado ou subpasta
+  basePath: process.env.NODE_ENV === 'production' ? '/Portifolio-Pessoal' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Portifolio-Pessoal/' : '',
 }
+
+module.exports = nextConfig
 
 mergeConfig(nextConfig, userConfig)
 

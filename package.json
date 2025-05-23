@@ -2,12 +2,14 @@
   "name": "frontend",
   "version": "1.0.0",
   "homepage": "https://SrFearless.github.io/Portifolio-Pessoal",
-  "scripts": {
-    "dev": "next dev -p 5000",
-    "build": "next build",
-    "predeploy": "npm run build",
-    "deploy": "main -d out"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "export": "next export",
+  "deploy": "gh-pages -d out",
+  "build-and-deploy": "npm run build && npm run export && npm run deploy"
+},
   "dependencies": {
     "@hookform/resolvers": "latest",
     "@next/font": "^14.2.15",
