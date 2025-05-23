@@ -1,7 +1,6 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-
   "homepage": "https://SrFearless.github.io/Portifolio-Pessoal",
   "scripts": {
     "dev": "next dev -p 5000",
@@ -9,7 +8,6 @@
     "predeploy": "npm run build",
     "deploy": "main -d out"
   },
-
   "dependencies": {
     "@hookform/resolvers": "latest",
     "@next/font": "^14.2.15",
@@ -47,6 +45,7 @@
     "cmdk": "1.0.4",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "8.5.1",
+    "framer-motion": "^12.12.1",
     "input-otp": "1.4.1",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",

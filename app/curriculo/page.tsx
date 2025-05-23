@@ -1,127 +1,134 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion"
+import { ThemeWrapper } from '@/components/ThemeWrapper';
 
-export default function Home() {
-  const [showModal, setShowModal] = useState(false)
+const educationItems = [
+  "Ensino Superior - ADS: Concluindo na Uninter, Centro - São José dos Pinhais / PR",
+  "Ensino Médio: Concluído no Colégio Chico Mendes, São José dos Pinhais / PR",
+  "Informática Profissional: Concluído na Cedaspy, Curitiba Pinheirinho / PR",
+  "Office Profissional: Concluído na Datamix, Centro - São José dos Pinhais / PR",
+  "Mecânica Industrial: Concluído na Cebrac, Centro - São José dos Pinhais / PR",
+  "Bombeiro Civil Classe III: Concluído no Padilha Treinamentos, Guatupê - São José dos Pinhais / PR",
+  "Operador de Empilhadeira: Concluído no ASM Treinamentos, Pinheirinho - Curitiba / PR",
+  "Ajuste e Processo de Injetoras: Concluído na Feltan, São Marcos - São José dos Pinhais / PR"
+];
+
+const skills = [
+  "Word, Excel e PowerPoint: Avançado",
+  "Informática em Geral: Avançado",
+  "Sistemas Operacionais: Windows XP/7/8/10/11 e Linux",
+  "Marketing Pessoal e Profissional",
+  "Ambiente Web",
+  "Administração Financeira",
+  "Photoshop",
+  "Design Gráfico",
+  "Desenvolvimento de Sites",
+  "Computação em Nuvem",
+  "Produção de Documentos Profissionais",
+  "Manutenção e Configuração de Micros",
+  "Desenvolvimento de Jogos",
+  "Operador de Empilhadeira, Rebocador e Transpaleteira",
+  "NR 11 e NR-12",
+  "Bombeiro Civil Profissional Classe 3",
+  "Prevenção e combate a incêndio",
+  "Análise de riscos",
+  "Resgate Técnico",
+  "Primeiros Socorros",
+  "SCI e Áreas Remotas",
+  "NR-20 e NR-23",
+  "Treinamento de Trocador de Molde",
+  "Análise e Desenvolvimento de Sistemas",
+  "Linguagem de Programação: CSS, HTML, Javascript, PlantUML e Python",
+  "Banco de Dados: MySQL, DBdesigner, Node.js",
+  "React (Next.js) e TypeScript",
+  "Tailwind CSS e arquitetura de componentes",
+  "Desenvolvimento de APIs RESTful",
+  "Testes e práticas de Clean Code"
+];
+
+export default function ResumePage() {
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <>
-      {/* ─── Conteúdo principal ─────────────────────────────────────────────── */}
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col items-center justify-center space-y-12 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-red-900 sm:text-5xl md:text-6xl">
-            Formação
-          </h1>
-          <p className="max-w-2xl text-xl text-red-100">
-            Nascido e criado em São José dos Pinhais/Paraná, busco algum dia 
-            conseguir me profissionalizar na programação, me tornando um sênior fullstack.
-          </p>
+    <ThemeWrapper>
+      <motion.div 
+        initial={{ x: -300 }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 100 }}
+      >
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col items-center justify-center space-y-12 text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-red-900 dark:text-red-300 sm:text-5xl md:text-6xl">
+              Formação
+            </h1>
+            
+            <p className="max-w-2xl text-xl text-black-100 dark:text-red-400">
+              Nascido e criado em São José dos Pinhais/Paraná, busco algum dia 
+              conseguir me profissionalizar na programação, me tornando um sênior fullstack.
+            </p>
 
-          <div className="mt-8 grid grid-cols-1 gap-6">
-            <div className="grid grid-cols-2 items-center rounded-lg border border-red-900 bg-black-100 p-2 shadow-sm">
-              <h2 className="mb-2 text-xl font-medium text-red-100">
-                Muito Prazer, Sou Tiago de Freitas Machado
-              </h2>
+            <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 items-center rounded-lg border border-red-900 dark:border-red-700 bg-black-100 dark:bg-gray-800 p-6 shadow-sm">
+              <div>
+                <h2 className="mb-4 text-2xl font-medium text-black-100 dark:text-red-300">
+                  Muito Prazer, Sou Tiago de Freitas Machado
+                </h2>
+              </div>
               
-              <div className="mb-0 rounded-full flex flex-col items-center">
+              <div className="flex flex-col items-center space-y-4">
                 <Button
                   onClick={() => setShowModal(true)}
-                  className="bg-red-100 border border-red-800 text-red-900 hover:bg-red-400/90"
+                  className="bg-red-100 dark:bg-red-900/50 border border-red-800 dark:border-red-700 text-red-900 dark:text-red-200 hover:bg-red-400/90 dark:hover:bg-red-800/80"
                 >
                   Especialidades
                 </Button>
+                
                 <img
                   src="/icons/Eu.png"
-                  alt="Minha Foto"
-                  className="h-80 w-80 mt-4"
+                  alt="Tiago de Freitas Machado"
+                  className="h-64 w-64 rounded-full object-cover border-4 border-red-800 dark:border-red-700 shadow-lg"
                 />
               </div>
             </div>
+
+            <div className="w-full max-w-4xl rounded-lg bg-red-100 dark:bg-gray-800 p-6 shadow-sm">
+              <h2 className="mb-6 text-2xl font-pixel text-red-900 dark:text-red-300 text-center border-b-2 border-red-800 dark:border-red-700 pb-2">
+                Formação Acadêmica e Cursos
+              </h2>
+              
+              <ul className="space-y-4 text-left text-black-900 dark:text-gray-200 font-pixel">
+                {educationItems.map((item, index) => (
+                  <li key={index} className="pb-4 border-b border-red-300 dark:border-gray-700 last:border-b-0 last:pb-0">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="flex flex-col items-center rounded-lg border bg-red-100 p-1 shadow-sm ">
-            <h2 className="mb-1 text-[30px] font-pixel text-red-900"> --------------------------- Formação --------------------------- </h2>
-            <p className="text-start text-[17px] text-black-900 font-pixel">
-            • Ensino Superior - ADS: Concluindo na Uninter, Centro - São José dos Pinhais / PR<br />
-            ---------------------------------------------------------------------------------------------------<br />
-            • Ensino Médio: Concluído no Colégio Chico Mendes, São José dos Pinhais / PR<br />
-            ---------------------------------------------------------------------------------------------------<br />
-            • Informática Profissional: Concluído na Cedaspy, Curitiba Pinheirinho / PR<br />
-            ---------------------------------------------------------------------------------------------------<br />
-            • Office Profissional: Concluído na Datamix, Centro - São José dos Pinhais / PR<br />
-            ---------------------------------------------------------------------------------------------------<br />
-            • Mecânica Industrial: Concluído na Cebrac, Centro - São José dos Pinhais / PR<br />
-            ---------------------------------------------------------------------------------------------------<br />
-            • Bombeiro Civil Classe III: Concluído no Padilha Treinamentos, Guatupê - São José dos Pinhais / PR<br />
-            ---------------------------------------------------------------------------------------------------<br />
-            • Operador de Empilhadeira: Concluído no ASM Treinamentos, Pinheirinho - Curitiba / PR<br />
-            ---------------------------------------------------------------------------------------------------<br />
-            • Ajuste e Processo de Injetoras: Concluído na Feltan, São Marcos - São José dos Pinhais / PR<br />
-            <span className="text-[30px] text-red-900">----------------------------------------------------------------</span>
-            </p>
-          </div>
+          {showModal && (
+            <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setShowModal(false)}>
+              <div className="bg-red-200/90 dark:bg-gray-700/95 rounded-lg shadow-lg max-w-2xl w-full p-6 relative max-h-[80vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+                <button onClick={() => setShowModal(false)} className="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white text-2xl">
+                  ✕
+                </button>
+
+                <h2 className="text-2xl text-red-800 dark:text-red-200 font-semibold mb-6 text-center">Minhas Especialidades</h2>
+                
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {skills.map((skill, index) => (
+                    <li key={index} className="bg-white/50 dark:bg-gray-600/50 p-3 rounded-md shadow-sm">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
-      </div>
-      {/* ─── Fim do conteúdo principal ───────────────────────────────────────── */}
-
-      {/* ─── Modal ─────────────────────────────────────────────────────────────── */}
-      {showModal && (
-        <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
-          onClick={() => setShowModal(false)} // fecha ao clicar fora
-        >
-          <div
-            className="bg-red-200/90 rounded-lg shadow-lg max-w-lg w-full p-6 relative"
-            onClick={e => e.stopPropagation()} // evita fechar ao clicar dentro
-          >
-            {/* Botão de fechar */}
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-            >
-              ✕
-            </button>
-
-            {/* Conteúdo do modal */}
-            <h2 className="text-2xl text-red-800 font-semibold mb-4">Minhas Especialidades</h2>
-            <p className="text-base text-black-700 font-semibold leading-relaxed ">
-              • Word, Excel e PowerPoint: Avançado;<br/>
-              • Informática em Geral: Avançado;<br/>
-              • Sistemas Operacionais: Windows XP/7/8/10/11 e Linux;<br/>
-              • Marketing Pessoal e Profissional;<br/>
-              • Ambiente Web;<br/>
-              • Administração Financeira;<br/>
-              • Photoshop;<br/>
-              • Design Gráfico;<br/>
-              • Desenvolvimento de Sites;<br/>
-              • Computação em Nuvem;<br/>
-              • Produção de Documentos Profissionais;<br/>
-              • Manutenção e Configuração de Micros;<br/>
-              • Desenvolvimento de Jogos;<br/>
-              • Operador de Empilhadeira, Rebocador e Transpaleteira;<br/>
-              • NR 11 e NR-12;<br/>
-              • Bombeiro Civil Profissional Classe 3;<br/>
-              • Prevenção e combate a incêndio;<br/>
-              • Análise de riscos;<br/>
-              • Resgate Técnico;<br/>
-              • Primeiros Socorros;<br/>
-              • SCI e Áreas Remotas;<br/> 
-              • NR-20 e NR-23;<br/>
-              • Treinamento de Trocador de Molde;<br/>
-              • Análise e Desenvolvimento de Sistemas;<br/>
-              • Linguagem de Programação: CSS, HTML, Javascript, PlantUML e Python;<br/>
-              • Banco de Dados: MySQL, DBdesigner, Node.js;<br/>
-              • React (Next.js) e TypeScript<br/>
-              • Tailwind CSS e arquitetura de componentes<br/>
-              • Desenvolvimento de APIs RESTful<br/>
-              • Testes e práticas de Clean Code<br/>
-            </p>
-          </div>
-        </div>
-      )}
-      {/* ─── Fim do modal ──────────────────────────────────────────────────────── */}
-    </>
-  )
+      </motion.div>
+    </ThemeWrapper>
+  );
 }

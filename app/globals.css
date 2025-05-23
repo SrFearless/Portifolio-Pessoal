@@ -55,6 +55,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply transition-colors duration-200;
+  }
+  .dark {
+    @apply bg-gray-900 text-gray-100;
   }
 }
 
